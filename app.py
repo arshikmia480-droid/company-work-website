@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -6,9 +6,15 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/register")
+@app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        return redirect("/payment")
     return render_template("register.html")
+
+@app.route("/payment")
+def payment():
+    return render_template("payment.html")
 
 @app.route("/login")
 def login():
