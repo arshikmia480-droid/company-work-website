@@ -1,40 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment - Company Work</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Payment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <div class="container">
 
-<h1>Company Work</h1>
+    <h2>Payment</h2>
 
-<h2>Registration Fee ₹70</h2>
+    <p>Scan this QR and pay.</p>
 
-<p>Please pay the registration fee to activate your account.</p>
+    <img src="{{ url_for('static', filename='Image (1).jpg') }}"
+         alt="QR Code"
+         width="250">
 
-<img src="{{ url_for('static', filename='images/bharatpe-qr.jpg') }}" width="250" alt="BharatPe QR">
+    <br><br>
 
-<h3>UPI ID</h3>
-
-<p><b>BHARATPE2C0E0F1I4X76930@unitype</b></p>
-
-<p><b>Receiver:</b> ARSHIK MIA</p>
-
-<form action="/dashboard" method="GET">
-
-<input type="text" name="txn" placeholder="Enter Transaction ID" required>
-
-<br><br>
-
-<button type="submit">
-Submit for Admin Approval
-</button>
-
-</form>
+    <form action="/submit_payment" method="POST">
+        <input type="text" name="utr" placeholder="Enter UTR Number" required>
+        <br><br>
+        <button type="submit">Submit Payment</button>
+    </form>
 
 </div>
 
