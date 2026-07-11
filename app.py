@@ -17,8 +17,22 @@ def register():
 @app.route("/payment", methods=["GET", "POST"])
 def payment():
     if request.method == "POST":
-        return redirect("/dashboard")
+        utr = request.form.get("utr", "").strip()
+
+        if not utr.isdigit() or len(utr) != 12:
+            return render_template(
+                "payment.html",
+                error="❌ Invalid UTR! Please enter a valid 12-digit UTR."
+            )
+
+        return redirect("/pending")
+
     return render_template("payment.html")
+
+
+@app.route("/pending")
+def pending():
+    return render_template("pending.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
