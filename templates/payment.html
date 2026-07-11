@@ -1,28 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Payment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Activation Payment</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <div class="container">
 
-    <h2>Payment</h2>
+    <h1>Company Work</h1>
 
-    <p>Scan this QR and pay.</p>
+    <h2>ID Activation</h2>
+
+    <h3 style="color:red;">Activation Fee: ₹70</h3>
+
+    <p>Please scan the QR code below and pay <b>₹70</b>.</p>
 
     <img src="{{ url_for('static', filename='Image (1).jpg') }}"
-         alt="QR Code"
+         alt="BharatPe QR"
          width="250">
 
     <br><br>
 
-    <form action="/submit_payment" method="POST">
-        <input type="text" name="utr" placeholder="Enter UTR Number" required>
+    <form action="/payment" method="POST">
+
+        <input type="text"
+               name="utr"
+               placeholder="Enter 12-digit UTR Number"
+               required>
+
         <br><br>
+
         <button type="submit">Submit Payment</button>
+
     </form>
+
+    <br>
+
+    <p style="color:green;">
+        After successful payment, your ID will be activated after verification.
+    </p>
 
 </div>
 
