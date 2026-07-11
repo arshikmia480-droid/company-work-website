@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Withdraw</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Withdraw Money</h1>
+
+<form action="/withdraw" method="POST">
+
+<input type="number" name="amount" placeholder="Enter Amount" required><br><br>
+
+<input type="text" name="upi" placeholder="Enter Your UPI ID" required><br><br>
+
+<button type="submit">Submit Withdraw Request</button>
+
+</form>
+
+<br>
+
+<a href="/wallet">
+<button type="button">Back to Wallet</button>
+</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
