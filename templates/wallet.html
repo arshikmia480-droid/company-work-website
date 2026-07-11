@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wallet</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>My Wallet</h1>
+
+<h2>Available Balance</h2>
+
+<h1>₹0.00</h1>
+
+<button onclick="location.href='/withdraw'">
+Withdraw
+</button>
+
+<br><br>
+
+<button onclick="location.href='/dashboard'">
+Back to Dashboard
+</button>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
