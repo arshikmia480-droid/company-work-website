@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome</h1>
 
-    <h2>Payment Submitted Successfully</h2>
+<div class="container">
 
-    <p>Your UTR has been received.</p>
+    <h1>Company Work Dashboard</h1>
 
-    <p>Status: <strong>Pending Verification</strong></p>
+    <a class="btn" href="/profile">👤 My Profile</a>
 
-    <br>
+    <a class="btn" href="/tasks">📋 Daily Tasks</a>
 
-    <a href="/profile">Profile</a><br><br>
-    <a href="/tasks">Tasks</a><br><br>
-    <a href="/wallet">Wallet</a><br><br>
-    <a href="/withdraw">Withdraw</a>
+    <a class="btn" href="/wallet">💰 Wallet</a>
+
+    <a class="btn" href="/withdraw">💸 Withdraw</a>
+
+    <a class="btn" href="/support">☎️ Support</a>
+
+    <a class="btn" href="/">🚪 Logout</a>
+
+</div>
 
 </body>
 </html>
