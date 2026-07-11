@@ -1,22 +1,25 @@
-import sqlite3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome</h1>
 
-conn = sqlite3.connect("users.db")
-cursor = conn.cursor()
+    <h2>Payment Submitted Successfully</h2>
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    email TEXT UNIQUE NOT NULL,
-    mobile TEXT NOT NULL,
-    password TEXT NOT NULL,
-    transaction_id TEXT,
-    status TEXT DEFAULT 'Pending',
-    wallet REAL DEFAULT 0
-)
-""")
+    <p>Your UTR has been received.</p>
 
-conn.commit()
-conn.close()
+    <p>Status: <strong>Pending Verification</strong></p>
 
-print("Database created successfully!")
+    <br>
+
+    <a href="/profile">Profile</a><br><br>
+    <a href="/tasks">Tasks</a><br><br>
+    <a href="/wallet">Wallet</a><br><br>
+    <a href="/withdraw">Withdraw</a>
+
+</body>
+</html>
