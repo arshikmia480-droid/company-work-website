@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Admin Panel</h1>
+
+<h2>Pending Payment</h2>
+
+<table border="1" width="100%">
+<tr>
+<th>Name</th>
+<th>Transaction ID</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>Arshik Mia</td>
+<td>TXN123456789</td>
+<td>Pending</td>
+<td>
+<button>Approve</button>
+<button>Reject</button>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>
