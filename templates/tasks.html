@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Tasks</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Daily Tasks</h1>
+
+<div class="task">
+    <h3>Task 1</h3>
+    <p>Watch a video - Reward ₹10</p>
+    <button>Complete</button>
+</div>
+
+<br>
+
+<div class="task">
+    <h3>Task 2</h3>
+    <p>Visit a website - Reward ₹20</p>
+    <button>Complete</button>
+</div>
+
+<br>
+
+<div class="task">
+    <h3>Task 3</h3>
+    <p>Share a referral link - Reward ₹30</p>
+    <button>Complete</button>
+</div>
+
+<br>
+
+<a href="/dashboard">
+<button>Back to Dashboard</button>
+</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
